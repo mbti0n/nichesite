@@ -1,0 +1,109 @@
+body {
+    padding: 10px;
+    font-family: sans-serif;
+    background-color: #F2F4F8;
+}
+
+div:not(#listPages, #extraDiv), article {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    border-top: 7px solid;
+    border-color: #5865F2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#extraDiv {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #FFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#switchMode {
+    display: inline-block;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.5);
+}
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%
+}
+
+#homeLink {
+    color: black;
+    transition: 0.25s ease color;
+
+}
+
+#homeLink:hover {
+    color: #5865F2
+}
+
+#linkHover {
+    color: gray;
+    background-color: transparent;
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: 0.25s ease background-color;
+}
+#linkHover:hover {
+    color: white;
+    background-color: #5865F2;
+}
+
+#articleLink {
+    color: #5865F2;
+    background-color: transparent;
+    text-decoration: underline;
+    transition: 0.25s ease background-color;
+}
+#articleLink:hover {
+    color: white;
+    background-color: #5865F2;
+}
+
+#customButton {
+    font-size: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #5865F2;
+    border: 0px;
+    color: white;
+    border-radius: 70px;
+}
+
+#timeResult {
+    line-height: 0.6;
+}
+
+hr {
+    margin-top: 20px
+}
+
+/* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
+input[type='number'] {
+    -moz-appearance:textfield;
+    font-size: 18px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
