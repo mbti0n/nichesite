@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan's 30-Hour to 24-Hour Time Converter - NicheSite</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+    <h1><a id="homeLink" href="index.html">NicheSite</a></h1>
+    <div>
+        <h1>Japan's 30-Hour Clock Converter</h1>
+
+        <p><a id="linkHover" href="24-to-30-hour.html">24-hour → 30-hour format</a><strong> / 30-hour → 24-hour format</strong></p>
+        <p><strong>Time to convert</strong> (30-hour, 06-29)</p>
+
+        <form id="30hour" method="post">
+            <input type="number" min="6" max="29" name="hour" placeholder="hr"><strong> : </strong>
+            <input type="number" min="-1" max="59" name="minute" placeholder="min"><br><br>
+
+            <input id="customButton" type="submit" value="Submit">
+        </form>
+
+        <div id="responseContainer">
+            <p><strong id="prompt1"></span></strong></p>
+
+            <p><strong id="prompt2"></strong></p>
+            <h2 id="convert30"></h2>
+        </div>
+        
+        <script>
+            document.getElementById("30hour").addEventListener("submit", (e) => {
+                e.preventDefault()
+                const timeData = new FormData(e.target)
+
+                document.getElementById("responseContainer").style.display = "block"
+
+                hour = timeData.get("hour")
+                minute = timeData.get("minute")
+
+                if (hour == "" || minute == "") { 
+                    hour = new Date().getHours()
+                    minute = new Date().getMinutes()
+                }
+
+                document.getElementById("prompt1").textContent = "Time in Japan's 30-hour time format is: " + String(hour).padStart(2, "0") + ":" + String(minute).padStart(2, "0")
+
+                document.getElementById("prompt2").textContent = "Time in standard time format is:"
+                if (hour > 23 && hour < 30) {
+                    document.getElementById("convert30").textContent = String(parseInt(hour) - 24).padStart(2, "0") + ":" + String(minute).padStart(2, "0")
+                } else {
+                    document.getElementById("convert30").textContent = String(hour).padStart(2, "0") + ":" + String(minute).padStart(2, "0")
+                }
+            })
+        </script>
+    </div>
+
+    <div id="extraDiv">
+        <h2>How It Works</h2>
+        <p>The 30-hour format in Japan is commonly used in transportation schedules, TV guides, and night event listings. This helps avoid confusion for late-night events.</p>
+        <p>Instead of resetting to 12:00 AM or 00:00 after midnight, the clock continues past 24:00 until 29:59, which corresponds to 5:59 AM (05:59). For example, 1:00 AM (01:00) in standard 24-hour time format is 25:00 in Japan's 30-hour time format, 4:30 AM (04:30) becomes 28:30, and so on. Once the clock reaches 6:00 AM (06:00), it returns to the normal 24-hour format.
+    </div>
+
+    <hr>
+    <footer>
+        <p>NicheSite is made by MBtion with love. 2026-<span id="yearCurrent"><script>document.getElementById("yearCurrent").innerHTML = new Date().getFullYear()</script></span></p>
+    </footer>
+</body>
+</html>
