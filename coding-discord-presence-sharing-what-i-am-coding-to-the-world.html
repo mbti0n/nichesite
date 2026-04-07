@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Coding Discord Presence: Sharing What I Am Coding to the World">
+    <meta property="og:description" content="Introducing a fun way to share coding progress as someone who codes a lot and is chronically online on Discord.">
+    <meta property="og:url" content="mbti0n.github.io/nichesite/coding-discord-presence-sharing-what-i-am-coding-to-the-world.html">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#2A3AEF">
+    <title>Coding Discord Presence: Sharing What I Am Coding to the World</title>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+    <div id="headerStyle">
+        <div id="headerText">
+            <h1><a id="homeLink1" href="index.html">NicheSite</a></h1>
+        </div>
+    </div>
+    <div id="headerContainer">
+        <h1>Coding Discord Presence: Sharing What I Am Coding to the World</h1>
+        <p><time id="publishDate" itemprop="datePublished" datetime="2026-04-07">Apr 07, 2026</time></p>
+        <p><i>Introducing a fun way to share coding progress as someone who codes a lot and is chronically online on Discord.</i></p>
+        <p>I am chronically online on Discord. I think it is enough to explain the need for Discord Presence for text editing apps. I find it cool, let&#39;s say, a cool flex to my fellow online friends who give zero damn about me, and a promising sign that I am serious about making coding projects. I have been using Discord presence plugins/extensions on VS Codium/VS Code and Neovim. </p>
+    </div>
+    <div id="extraDiv">
+        <img src="img/discord-presence.jpg" alt="Screenshot of Discord Presence">
+        <h2 id="vs-codium-vs-code-discord-presence-by-crawl">VS Codium / VS Code: Discord Presence by Crawl</h2>
+        <p><a href="https://marketplace.visualstudio.com/items?itemName=icrawl.discord-vscode">Get the extension on Visual Studio Marketplace</a></p>
+        <p>Currently, I am using VS Codium, an open-source version of Microsoft&#39;s VS Code. Regardless of the client I am using, I definitely cannot live without a tiny tool named Discord Presence. As the name suggests, it shows my current workspace as a Discord Presence status, and it includes various display customizations, mostly focusing on the detail sections, including current workspace information and current file information. When the VS Codium/VS Code window is not focused, the extension intelligently displays the presence status as &quot;idling&quot;.</p>
+        <p>Well, Discord Presence is super generous with the information that can be shown. However, I am not into revealing the actual filename or folder name. Therefore, I added custom strings that hide the filename or folder name. And <em>voila</em>! I mean, it is not a big deal, but it is handy enough to prevent weird circumstances if somebody really stalks my Discord status.</p>
+        <p>Here is my configuration of Discord Presence, in JSON.</p>
+        <pre><code class="lang-json">
+<span class="hljs-comment">"discord.detailsDebugging"</span>: <span class="hljs-comment">"Debugging something"</span>,
+<span class="hljs-comment">"discord.detailsEditing"</span>: <span class="hljs-comment">"Editing something"</span>,
+<span class="hljs-comment">"discord.removeLowerDetails"</span>: <span class="hljs-keyword">true</span>,
+<span class="hljs-comment">"discord.lowerDetailsIdling"</span>: <span class="hljs-comment">"Taking a break"</span>,
+<span class="hljs-comment">"discord.largeImageIdling"</span>: <span class="hljs-comment">"Hey, leave me alone!"</span>,
+<span class="hljs-comment">"discord.detailsIdling"</span>: <span class="hljs-comment">"Taking a break"</span>,
+<span class="hljs-comment">"discord.largeImage"</span>: <span class="hljs-comment">"Aren't you stalking my source code?"</span>,
+        </code></pre>
+    </div>
+    <div id="extraDiv">
+        <img src="img/cord.jpg" alt="Screenshot of Cord">
+        <h2 id="neovim-cord-by-vyor">Neovim: Cord by vyor</h2>
+        <p><a href="https://github.com/vyfor/cord.nvim">Get the extension on GitHub</a></p>
+        <p>This is by far the Discord presence plugin with the most customizations, both function-wise and aesthetic-wise. Cord has similar options to Discord Presence on VS Codium; however, it supports custom status icon packs. Personally, I am using Gruvbox as the main colorscheme so I am good with the Default pack; but if I had to choose the best pack, I would vote for Minecraft, no questions. It is cute and surprisingly elegant because it relates to Microsoft&#39;s Fluent Design icons, with the slightly different color shades between each component.</p>
+        <p>Here is the configuration of Cord. Note that I am using Lazyvim.</p>
+        <pre><code class="lang-lua">
+<span class="hljs-keyword">return</span> {
+    { <span class="hljs-string">"vyfor/cord.nvim"</span> },
+    {
+        <span class="hljs-string">"vyfor/cord.nvim"</span>,
+        <span class="hljs-comment">---@type CordConfig</span>
+        opts = {
+        display = {
+            theme = <span class="hljs-string">"default"</span>,
+        },
+        text = {
+            editing = <span class="hljs-string">"Editing something"</span>,
+            viewing = <span class="hljs-string">"Viewing something"</span>,
+            workspace = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">""</span>
+            <span class="hljs-keyword">end</span>,
+        },
+        },
+    },
+}
+        </code></pre>
+
+    </div>
+
+    <hr>
+    <footer>
+        <p>NicheSite is created by MBtion with love. 2026-<span id="yearCurrent"><script>document.getElementById("yearCurrent").textContent = new Date().getFullYear()</script></span></p>
+    </footer>
+</body>
+</html>
