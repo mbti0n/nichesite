@@ -207,6 +207,24 @@ hr {
     margin-top: 5px;
 }
 
+#caption {
+    font-size: 0.85rem;
+}
+
+#captionLink:hover, #captionLink:active, #captionLink:visited {
+    color: black
+}
+
+#photoLayout {
+    display: flex;
+    gap: 10px;
+}
+
+#photoLayoutSingle {
+    width: 50%;
+    margin: auto
+}
+
 /* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
 input[type='number'] {
     -moz-appearance:textfield;
