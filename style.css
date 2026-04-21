@@ -75,7 +75,7 @@ article {
 
 #publishDate {
     color: rgba(37, 37, 37, 0.8);
-    font-size: 14px;
+    font-size: 0.85rem;
     text-transform: uppercase;
 }
 
@@ -228,7 +228,7 @@ hr {
 /* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
 input[type='number'] {
     -moz-appearance:textfield;
-    font-size: 18px;
+    font-size: 1rem;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
