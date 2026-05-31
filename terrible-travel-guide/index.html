@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Terrible Travel Guide - NicheSite">
+    <meta property="og:description" content="A fun digital diary capturing all the places I have been to. Use it as an opinion-driven travel guide, not an official reference.">
+    <meta property="og:url" content="https://mbti0n.github.io/nichesite">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#ab7c03">
+    <title>Terrible Travel Guide - NicheSite</title>
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+    <div id="headerStyle">
+        <div id="headerText">
+            <h1>NicheSite</h1>
+            <h2>A niche website for niche needs. Created by MBtion.</h2>
+        </div>
+    </div>
+    <nav>
+        <div id="navText">
+            <a href="../index.html" id="navLink">Home</a>
+            <a href="index.html" id="navLink" style="border-bottom: 2px solid;">Terrible Travel Guide</a>
+            <a id="navLink" style="pointer-events: none;">|</a>
+            <a href="../about.html" id="navLink">About</a>
+            <a href="https://mbti0n.github.io/" id="navLink">Who's MBtion?</a>
+        </div>
+    </nav>
+    <div id="listPages">
+        <article id="blank"></article>
+        <article id="pageDescription" style="; background: #7a5f59">
+            <div id="cover"></div>
+            <div id="pageDescText">
+                <h1 style="color:white">Terrible Travel Guide</h1>
+                <p style="font-weight: 400; color: white">A fun digital diary capturing all the places I have been to. Use it as an opinion-driven travel guide, not an official reference.</p>
+            </div>
+        </article>
+
+        <article>
+            <div id="text">
+                <h2><a id="homeLink" href="las-vegas.html">Las Vegas</a></h2>
+                <p><time id="publishDate" itemprop="datePublished" datetime="2026-05-10">Nevada, United States |  May 10, 2026</time></p>
+            </div>
+            <img id="thumbnail" src="../img/vegas.jpeg">
+        </article>
+    
+
+        <article>
+            <div id="text">
+                <h2><a id="homeLink" href="washington-dc.html">Washington</a></h2>
+                <p><time id="publishDate" itemprop="datePublished" datetime="2025-03-21">District of Columbia, United States | Mar 21, 2025</time></p>
+            </div>
+            <img id="thumbnail" src="../img/washington.jpeg">
+        </article>
+    </div>
+
+    <hr>
+    <footer>
+        <p>NicheSite is created by MBtion with love. 2026-<span id="yearCurrent"><script>document.getElementById("yearCurrent").textContent = new Date().getFullYear()</script></span></p>
+    </footer>
+</body>
+</html>

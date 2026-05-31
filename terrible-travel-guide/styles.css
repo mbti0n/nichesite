@@ -9,7 +9,7 @@ body {
 }
 
 #headerStyle {
-    background-color: #4755ee;
+    background-color: #ab7c03;
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -17,7 +17,7 @@ body {
 }
 
 nav {
-    background-color: #2A3AEF;
+    background-color: #856003;
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -30,6 +30,9 @@ pre {
     padding: 5px 15px;
 }
 
+#caption {
+    font-size: 0.85rem;
+}
 
 #navLink {
     margin-right: 20px;
@@ -43,25 +46,75 @@ pre {
     border-bottom: 2px solid;
 }
 
-article:not(#blank):not(#hotTake) {
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 10px;
+article:not(#blank):not(#pageDescription) {
+    display: flex;
+    padding-left: 15px;
+    margin-top: 10px;
     background-color: #FFF;
-    border-top: 7px solid;
-    border-color: #2A3AEF;
+    align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#hotTake {
-    border: 0px !important;
-    background: #fedc03 !important;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+#pageDescription {
     margin-bottom: 10px;
+    background-color: #FFF;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cover {
+    background-image: url("../img/terrible-travel-guide.jpeg");
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#darkLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, #1f1f1fe0);
+}
+
+#infoText {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0.1;
+}
+
+#photoLayout {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+#photoLayoutSingle {
+    width: 50%;
+    margin: auto
+}
+
+#travelDiv {
+    position: relative;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform-origin: center;
+    background-color: #0000005e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#pageDescText {
+    padding: 15px;
 }
 
 #morePageDiv {
@@ -75,17 +128,16 @@ article:not(#blank):not(#hotTake) {
 
 #headerContainer {
     padding: 15px;
+    padding-bottom: 5px;
     margin: 20px;
+    margin-top: 0px;
     margin-bottom: 10px;
-    background-color: #FFF;
-    border-top: 7px solid;
-    border-color: #2A3AEF;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #publishDate {
     color: rgba(37, 37, 37, 0.8);
-    font-size: 0.85rem;
+    font-size: 14px;
     text-transform: uppercase;
 }
 
@@ -107,6 +159,13 @@ article:not(#blank):not(#hotTake) {
 
 #switchMode {
     display: inline-block;
+}
+
+#thumbnail {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-left: auto
 }
 
 h1, h2, h3, h4 {
@@ -143,7 +202,7 @@ img {
 }
 
 #homeLink:hover {
-    color: #2A3AEF
+    color: #ab7c03
 }
 
 
@@ -165,7 +224,7 @@ img {
 }
 #linkHover:hover {
     color: white;
-    background-color: #2A3AEF;
+    background-color: #ab7c03;
 }
 
 #articleLink {
@@ -176,7 +235,7 @@ img {
 }
 #articleLink:hover {
     color: white;
-    background-color: #2A3AEF;
+    background-color: #ab7c03;
 }
 
 #customButton {
@@ -185,7 +244,7 @@ img {
     padding-right: 12px;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #2A3AEF;
+    background-color: #ab7c03;
     transition: 0.25s ease background-color;
     border: 0px;
     color: white;
@@ -198,7 +257,7 @@ img {
 #responseContainer {
     display: none;
     margin-top: 15px;
-    background-color: #2A3AEF;
+    background-color: #ab7c03;
     color: white;
     padding: 15px;
 }
@@ -217,30 +276,10 @@ hr {
     margin-top: 5px;
 }
 
-#caption {
-    font-size: 0.85rem;
-}
-
-#captionLink:hover, #captionLink:active, #captionLink:visited {
-    color: black
-}
-
-#photoLayout {
-    display: flex;
-    overflow: auto;
-    white-space: nowrap;
-    gap: 10px;
-}
-
-#photoLayoutSingle {
-    width: 50%;
-    margin: auto
-}
-
 /* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
 input[type='number'] {
     -moz-appearance:textfield;
-    font-size: 1rem;
+    font-size: 18px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -254,7 +293,7 @@ input::-webkit-inner-spin-button {
         margin-right: auto;
     }
     
-    footer, hr, #headerContainer, #extraDiv {
+    footer, hr, #headerContainer, #extraDiv, #travelDiv {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
