@@ -304,4 +304,8 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #photoLayoutSingle {
+        width: 100%;
+    }
 }
