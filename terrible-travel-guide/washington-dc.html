@@ -12,18 +12,36 @@
     <meta name="theme-color" content="#85857A" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#85857A" media="(prefers-color-scheme: dark)">
     <title>Washington</title>
-    <link rel="stylesheet" href="styles.css"></link>
+    <link id="theme" rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+<script>
+    function switchTheme() {
+        const theme = document.getElementById("theme");
+
+        if (theme.getAttribute("href") === "style2.css") {
+            theme.setAttribute("href", "style.css");
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_2</i>";
+        } else {
+            theme.setAttribute("href", "style2.css");
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_7</i>";
+        }
+    }
+</script>
 <body>
-    <div id="headerStyle">
-        <div id="headerText">
-            <h1><a id="homeLink1" href="index.html">NicheSite</a></h1>
+    <div id="header">
+        <div id="headerStyle">
+            <div id="headerText">
+                <h1>NicheSite</h1>
+                <h2>A niche website for niche needs. Created by MBtion.</h2>
+            </div>
+            <button id="themeSwitcher" onclick="switchTheme()"><i class="material-icons">brightness_2</i></button>
         </div>
     </div>
     <nav>
         <div id="navText">
             <a href="../index.html" id="navLink">Home</a>
-            <a href="index.html" id="navLink" style="border-bottom: 2px solid;">Terrible Travel Guide</a>
+            <a href="index.html" id="navLink" style="border-bottom: 4px solid;">Terrible Travel Guide</a>
             <a id="navLink" style="pointer-events: none;">|</a>
             <a href="../about.html" id="navLink">About</a>
             <a href="https://mbti0n.github.io/" id="navLink">Who's MBtion?</a>

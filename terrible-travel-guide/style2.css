@@ -5,11 +5,11 @@
 
 body {
     font-family: sans-serif;
-    background-color: #F2F4F8;
+    background-color: #121212;
 }
 
 #header {
-    background-color: #4755ee;
+    background-color: #1F1F1F;
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -21,7 +21,7 @@ body {
 }
 
 nav {
-    background-color: #2A3AEF;
+    background-color: #1F1F1F;
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -34,6 +34,9 @@ pre {
     padding: 5px 15px;
 }
 
+#caption {
+    font-size: 0.85rem;
+}
 
 #navLink {
     margin-right: 20px;
@@ -48,25 +51,75 @@ pre {
     border-bottom: 4px solid;
 }
 
-article:not(#blank):not(#hotTake) {
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 10px;
-    background-color: #FFF;
-    border-top: 7px solid;
-    border-color: #2A3AEF;
+article:not(#blank):not(#pageDescription) {
+    display: flex;
+    padding-left: 15px;
+    margin-top: 10px;
+    background-color: #1E1E1E;
+    align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#hotTake {
-    border: 0px !important;
-    background: #fedc03 !important;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+#pageDescription {
     margin-bottom: 10px;
+    background-color: #FFF;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cover {
+    background-image: url("../img/terrible-travel-guide.jpeg");
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#darkLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, transparent, #1f1f1fe0);
+}
+
+#infoText {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0.1;
+}
+
+#photoLayout {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 10px;
+}
+
+#photoLayoutSingle {
+    width: 70%;
+    margin: auto
+}
+
+#travelDiv {
+    position: relative;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform-origin: center;
+    background-color: #0000005e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#pageDescText {
+    padding: 15px;
 }
 
 #morePageDiv {
@@ -80,16 +133,16 @@ article:not(#blank):not(#hotTake) {
 
 #headerContainer {
     padding: 15px;
+    padding-bottom: 5px;
     margin: 20px;
+    margin-top: 0px;
     margin-bottom: 10px;
-    background-color: #FFF;
-    border-top: 7px solid;
-    border-color: #2A3AEF;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #1E1E1E;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 #publishDate {
-    color: rgba(37, 37, 37, 0.8);
+    color: white;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -106,7 +159,7 @@ article:not(#blank):not(#hotTake) {
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: #FFF;
+    background-color: #1E1E1E;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -114,12 +167,21 @@ article:not(#blank):not(#hotTake) {
     display: inline-block;
 }
 
+#thumbnail {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin-left: auto
+}
+
 h1, h2, h3, h4 {
     margin-top: 15px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    color: white;
 }
 
 p {
+    color: white;
     margin-bottom: 13px;
 }
 
@@ -146,19 +208,19 @@ img {
     margin-left: auto;
     height: 40px;
     width: 40px;
-    background: #353fb3;
+    background: #3b3b3b;
     color: white;
     border: 0px solid;
     border-radius: 50px;
 }
 
 #homeLink {
-    color: black;
+    color: white;
     transition: 0.25s ease color;
 }
 
 #homeLink:hover {
-    color: #2A3AEF
+    color: #8f7021
 }
 
 
@@ -180,42 +242,18 @@ img {
 }
 #linkHover:hover {
     color: white;
-    background-color: #2A3AEF;
+    background-color: #8f7021;
 }
 
 #articleLink {
-    color: #5865F2;
+    color: #b08e38;
     background-color: transparent;
     text-decoration: underline;
     transition: 0.25s ease background-color;
 }
 #articleLink:hover {
     color: white;
-    background-color: #2A3AEF;
-}
-
-#customButton {
-    font-size: 16px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background-color: #2A3AEF;
-    transition: 0.25s ease background-color;
-    border: 0px;
-    color: white;
-}
-
-#customButton:hover {
-    background-color: #222763;
-}
-
-#responseContainer {
-    display: none;
-    margin-top: 15px;
-    background-color: #2A3AEF;
-    color: white;
-    padding: 15px;
+    background-color: #b08e38;
 }
 
 #timeResult {
@@ -232,18 +270,8 @@ hr {
     margin-top: 5px;
 }
 
-/* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
-input[type='number'] {
-    -moz-appearance:textfield;
-    font-size: 18px;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
 @media screen and (min-width: 1400px) {
-    #listPages {
+    #listPages, #travelDiv {
         width: 50%;
         margin-left: auto;
         margin-right: auto;
@@ -260,17 +288,22 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #photoLayoutSingle {
+        width: 50%;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    #listPages {
+    #listPages, #travelDiv {
         width: 60%;
         margin-left: auto;
         margin-right: auto;
     }
     
     footer, hr, #headerContainer, #extraDiv {
-        width: 50%;
+        width: 60%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -280,10 +313,15 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #photoLayoutSingle {
+        width: 50%;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1100px) {
-    #listPages {
+    #listPage, #travelDiv {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -299,5 +337,10 @@ input::-webkit-inner-spin-button {
         width: 83%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #photoLayoutSingle {
+        width: 50%;
+        margin: auto;
     }
 }
