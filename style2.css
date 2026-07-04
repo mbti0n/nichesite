@@ -134,10 +134,11 @@ li {
 }
 
 hr, #line {
-    color: rgba(0, 0, 0, 0.5);
+    color: #ffffff80;
 }
 a {
     text-decoration: none;
+    color: #4a5fd6
 }
 
 img {

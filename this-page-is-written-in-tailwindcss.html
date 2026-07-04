@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="This Page Is Written in TailwindCSS">
+    <meta property="og:description" content="A simple page to test my understanding of TailwindCSS.">
+    <meta property="og:url" content="mbti0n.github.io/nichesite/this-page-is-written-in-tailwindcss.html">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#2A3AEF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2A3AEF" media="(prefers-color-scheme: dark)">
+    <title>This Page Is Written in TailwindCSS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<script>
+    let isDark = false;
+    function switchTheme() {
+        const body = document.body;
+        const header = document.getElementById("header");
+        const nav = document.querySelector("nav");
+        const headerContainer = document.getElementById("headerContainer");
+        const publishDate = document.getElementById("publishDate");
+        const textElement = document.getElementsByTagName("p")
+        const h1 = document.getElementsByTagName("h1")[1]
+        const hr = document.querySelector("hr");
+
+        if (isDark == false) {
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_7</i>";
+            body.classList.replace("bg-[#F2F4F8]", "bg-[#121212]");
+            header.classList.replace("bg-[#4755ee]", "bg-[#1F1F1F]");
+            headerContainer.classList.replace("bg-white", "bg-[#1E1E1E]");
+            nav.classList.replace("bg-[#2A3AEF]", "bg-[#1F1F1F]");
+            headerContainer.classList.replace("border-[#2A3AEF]", "border-[#3F51B5]");
+            publishDate.classList.replace("text-[#252525cc]", "text-white");
+            for (const p of textElement) {
+                p.classList.replace("text-black", "text-white")
+            }
+            h1.classList.replace("text-black", "text-white");
+            hr.classList.replace("border-[#00000080]", "border-[#ffffff80]");
+            isDark = true;
+        } else {
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_2</i>";
+            body.classList.replace("bg-[#121212]", "bg-[#F2F4F8]");
+            header.classList.replace("bg-[#1F1F1F]", "bg-[#4755ee]");
+            headerContainer.classList.replace("bg-[#1E1E1E]", "bg-white");
+            nav.classList.replace("bg-[#1F1F1F]", "bg-[#2A3AEF]");
+            headerContainer.classList.replace("border-[#3F51B5]", "border-[#2A3AEF]");
+            publishDate.classList.replace("text-white", "text-[#252525cc]");
+            for (const p of textElement) {
+                p.classList.replace("text-white", "text-black")
+            }
+            h1.classList.replace("text-white", "text-black");
+            hr.classList.replace("border-[#ffffff80]", "border-[#00000080]");
+            isDark = false;
+        }
+    }
+</script>
+<body class="bg-[#F2F4F8]">
+    <div id="header" class="bg-[#4755ee] p-[10px] pl-[20px] pr-[20px]">
+        <div id="headerStyle" class="flex min-[900px]:max-[1400px]:w-[83%] min-[900px]:max-[1100px]:ml-auto min-[900px]:max-[1100px]:mr-auto min-[1100px]:max-[1400px]:w-[63%] min-[1100px]:max-[1400px]:ml-auto min-[1100px]:max-[1400px]:mr-auto min-[1400px]:w-[53%] min-[1400px]:ml-auto min-[1400px]:mr-auto">
+            <div id="headerText">
+                <h1 class="text-[33px] font-bold text-white mt-[8px]">NicheSite</h1>
+                <h2 class="text-white text-[1.5em] leading-7.25 font-bold mt-[15px] mb-[14px] [text-wrap:balance]">A niche website for niche needs. Created by MBtion.</h2>
+            </div>
+            <button class="h-[40px] ml-auto w-[40px] bg-[#353fb3] text-white border-[0px] rounded-[50px]" id="themeSwitcher" onclick="switchTheme()"><i class="material-icons">brightness_2</i></button>
+        </div>
+    </div>
+    <nav class="bg-[#2A3AEF] p-[8px] pl-[20px] pr-[20px]">
+        <div id="navText" class="min-[900px]:max-[1400px]:w-[83%] min-[900px]:max-[1100px]:ml-auto min-[900px]:max-[1100px]:mr-auto min-[1100px]:max-[1400px]:w-[63%] min-[1100px]:max-[1400px]:ml-auto min-[1100px]:max-[1400px]:mr-auto min-[1400px]:w-[53%] min-[1400px]:ml-auto min-[1400px]:mr-auto">
+            <a class="text-white mr-[20px] pb-[7px] hover:border-b-[4px]" href="index.html" id="navLink" style="border-bottom: 4px solid;">Home</a>
+            <a class="text-white mr-[20px] pb-[7px] hover:border-b-[4px]" href="terrible-travel-guide/index.html" id="navLink">Terrible Travel Guide</a>
+            <a class="text-white mr-[20px] hover:border-b-[4px]" id="navLink" style="pointer-events: none;">|</a>
+            <a class="text-white mr-[20px] pb-[7px] hover:border-b-[4px]" href="about.html" id="navLink">About</a>
+            <a class="text-white mr-[20px] pb-[7px] hover:border-b-[4px]" href="https://mbti0n.github.io/" id="navLink">Who's MBtion?</a>
+        </div>
+    </nav>
+    <div id="headerContainer" class="border-t-[7px] border-[#2A3AEF] p-[15px] m-[20px] mb-[10px] bg-white shadow-[0_2px_10px_#00000033] min-[900px]:max-[1400px]:w-[80%] min-[900px]:max-[1100px]:ml-auto min-[900px]:max-[1100px]:mr-auto min-[1100px]:max-[1400px]:w-[52%] min-[1100px]:max-[1400px]:ml-auto min-[1100px]:max-[1400px]:mr-auto min-[1400px]:w-[52%] min-[1400px]:ml-auto min-[1400px]:mr-auto">
+        <h1 class="text-black text-[32px] font-bold mt-[10px] mb-[15px] leading-11">This Page Is Written in TailwindCSS</h1>
+        <p class="text-black leading-[1.5] mb-[13px]"><time id="publishDate" class="text-[#252525cc] uppercase text-[14px]" itemprop="datePublished" datetime="2026-07-02">Jul 02, 2026</time></p>
+        <p class="text-black mb-[13px] leading-[1.5]"><i>A simple page to test my understanding of TailwindCSS.</i></p>
+        <p class="text-black mb-[13px] leading-[1.5]">What's up. So I started learning TailwindCSS as a result of my curiosity to modern websites' source code. During my inspecting process, 9 out of 10 websites have very weird element class names with specific properties. After GPT-ing them, I got an answer: TailwindCSS properties.</p>
+        <p class="text-black mb-[13px] leading-[1.5]">Keep in mind, this page may look a bit odd as TailwindCSS properties have a slightly output compared to plain CSS.</p>
+
+    </div>
+
+    <hr class="m-[20px] mt-[5px] border-[#00000080] min-[900px]:max-[1400px]:w-[80%] min-[900px]:max-[1100px]:ml-auto min-[900px]:max-[1100px]:mr-auto min-[1100px]:max-[1400px]:w-[52%] min-[1100px]:max-[1400px]:ml-auto min-[1100px]:max-[1400px]:mr-auto min-[1400px]:w-[52%] min-[1400px]:ml-auto min-[1400px]:mr-auto">
+    <footer class="pl-[15px] pr-[15px] min-[900px]:max-[1400px]:w-[80%] min-[900px]:max-[1100px]:ml-auto min-[900px]:max-[1100px]:mr-auto min-[1100px]:max-[1400px]:w-[52%] min-[1100px]:max-[1400px]:ml-auto min-[1100px]:max-[1400px]:mr-auto min-[1400px]:w-[52%] min-[1400px]:ml-auto min-[1400px]:mr-auto">
+        <p class="text-black">NicheSite is created by MBtion with love. 2026-<span id="yearCurrent"><script>document.getElementById("yearCurrent").textContent = new Date().getFullYear()</script></span></p>
+    </footer>
+</body>
+</html>

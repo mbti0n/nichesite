@@ -85,7 +85,7 @@ article:not(#blank):not(#hotTake) {
     background-color: #FFF;
     border-top: 7px solid;
     border-color: #2A3AEF;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px #00000033;
 }
 
 #publishDate {
@@ -132,7 +132,7 @@ li {
 }
 
 hr, #line {
-    color: rgba(0, 0, 0, 0.5);
+    color: #00000080;
 }
 a {
     text-decoration: none;
