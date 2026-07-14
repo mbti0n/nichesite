@@ -122,15 +122,6 @@ article:not(#blank):not(#pageDescription) {
     padding: 15px;
 }
 
-#morePageDiv {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: #FFF;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
 #headerContainer {
     padding: 15px;
     padding-bottom: 5px;
@@ -162,10 +153,6 @@ article:not(#blank):not(#pageDescription) {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#switchMode {
-    display: inline-block;
-}
-
 #thumbnail {
     object-fit: cover;
     width: 200px;
@@ -190,7 +177,7 @@ li {
     margin-left: 40px;
 }
 
-hr, #line {
+hr {
     color: rgba(0, 0, 0, 0.5);
 }
 a {
@@ -221,15 +208,6 @@ img {
 }
 
 
-#homeLink1 {
-    color: white;
-    transition: 0.25s ease color;
-}
-
-#homeLink1:hover {
-    color: #929292
-}
-
 #linkHover {
     color: gray;
     background-color: transparent;
@@ -240,21 +218,6 @@ img {
 #linkHover:hover {
     color: white;
     background-color: #ab7c03;
-}
-
-#articleLink {
-    color: #5865F2;
-    background-color: transparent;
-    text-decoration: underline;
-    transition: 0.25s ease background-color;
-}
-#articleLink:hover {
-    color: white;
-    background-color: #ab7c03;
-}
-
-#timeResult {
-    line-height: 0.6;
 }
 
 footer {
