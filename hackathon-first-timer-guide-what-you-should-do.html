@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Hackathon First-Timer Guide: What You Should Do">
+    <meta property="og:description" content="Planning a project two weeks before the hackathon? It's a good idea, but you may want to focus on the more critical and technical aspects of your project.">
+    <meta property="og:url" content="mbti0n.github.io/nichesite/hackathon-first-timer-guide-what-you-should-do.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://mbti0n.github.io/nichesite/img/knight-hacks.JPG">
+
+
+    <meta name="theme-color" content="#2A3AEF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2A3AEF" media="(prefers-color-scheme: dark)">
+    <title>Hackathon First-Timer Guide: What You Should Do</title>
+    <link id="theme" rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<script>
+    function switchTheme() {
+        const theme = document.getElementById("theme");
+
+        if (theme.getAttribute("href") === "style.css") {
+            theme.setAttribute("href", "style2.css");
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_7</i>";
+        } else {
+            theme.setAttribute("href", "style.css");
+            document.getElementById("themeSwitcher").innerHTML = "<i class=\"material-icons\">brightness_2</i>";
+        }
+    }
+</script>
+<body>
+    <div id="header">
+        <div id="headerStyle">
+            <div id="headerText">
+                <h1>NicheSite</h1>
+                <h2>A niche website for niche needs. Created by MBtion.</h2>
+            </div>
+            <button id="themeSwitcher" onclick="switchTheme()"><i class="material-icons">brightness_2</i></button>
+        </div>
+    </div>
+    <nav>
+        <div id="navText">
+            <a href="index.html" id="navLink" style="border-bottom: 4px solid;">Home</a>
+            <a href="terrible-travel-guide/index.html" id="navLink">Terrible Travel Guide</a>
+            <a id="navLink" style="pointer-events: none;">|</a>
+            <a href="about.html" id="navLink">About</a>
+            <a href="https://mbti0n.github.io/" id="navLink">Who's MBtion?</a>
+        </div>
+    </nav>
+    <div id="headerContainer">
+        <h1>Hackathon First-Timer Guide: What You Should Do</h1>
+        <p><em>Planning a project two weeks before the hackathon? It's a good idea, but you may want to focus on the more critical and technical aspects of your project.</em></p>
+        <p>I finished my first ever hackathon on October 11 with Knight Hacks. It was an incredible experience because the atmosphere of a hackathon is very different compared to normal coding classes or working independently. My team's project turned out pretty well, and we received some good comments from the judges afterward. However, the story behind this project is shocking because it was not the project we originally planned to build. We wanted to create an app using the LinkedIn API, but I made the mistake of not carefully reading the usage permissions. The LinkedIn API is strictly limited to companies and organizations. My team only learned this information when our project was halfway finished, and we were extremely frustrated as we discovered more unpromising details.</p>
+        <p>Thankfully, we did not fail the hackathon miserably, even though we had to build a completely different project. This experience highlighted one of the issues I should have addressed better to improve my overall hackathon experience.</p>
+        <p>Also, I did not win any prizes, and I did not make many connections during the Knight Hacks hackathon. I'm just writing this as someone who made mistakes on his first attempt so that future newcomers will be less likely to have a frustrating hackathon experience and make similar mistakes.</p>
+        <div id="photoLayoutSingle">
+            <img src="img/knight-hacks.JPG" alt="Lenny, Knight Hacks' mascot, and other merchandise.">
+            <p id="caption">Lenny, Knight Hacks' mascot, and other merchandise.</p>
+        </div>
+        </div>
+    <div id="extraDiv">
+        <h2>Carefully learn about the API related to your project</h2>
+        <p>Please read the API documentation very carefully! You don't want to fail your hackathon just because the APIs you are using are not permitted.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Sleeping equipments</h2>
+        <p>Bring noise-canceling headphones if you don't want to hear the snores of fellow participants. You don't need to sleep in designated resting rooms either; just find a comfortable spot, as long as you bring basic sleeping equipments like a blanket and pillow.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Think about non-technical users</h2>
+        <p>Non-technical users are surprisingly the main demographic for tech products. What does that mean? This means your projects should be so easy to use for non-technical users that they become vital to their lives and to the industry. You don't want your projects known only by fellow tech people; you want to go mainstream.</p>
+        <p>My advice would be to take a look at winning hackathon projects. It is one of the most direct ways to get an idea of what types of projects can win. There is one thing that winning hackathon projects always have in common: they are life-changing for users and make their lives easier, especially for those with impairments or disabilities.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Learn about sponsors and their challenges</h2>
+        <p>The sooner, the better. Similar to Tip #3, you will have more time to learn what each sponsor expects, which gives you a better starting point to build a relevant, useful use case.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Print your resume just in case</h2>
+        <p>There might be resume check sessions or career fairs during the hackathon. Take advantage of every moment the sponsors are around and are available to see your resume and answer your questions.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Go social</h2>
+        <p>Participating in hackathons is not only about making a project; it is also a good opportunity to meet a good amount of people doing the same thing and pursuing the same field. The number of hackathon participants varies, but one thing always remains: they are here to be creative with tech and programming. Oh, and don't forget to ask for their LinkedIn if possible, and join all the social events as well.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Learn to use Git as a team</h2>
+        <p>Chances are your team's project is posted on GitHub, and every new commit from each member should be done together within the same repository. Learn how to push your own commit, pull others' new commits, and stash your own in case your commit is cluttered. Git could be very confusing to deal with, but it should not be the thing that pushes your team away from an efficient collaboration effort.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Check parking rules</h2>
+        <p>Please double check the parking rules mentioned in the hacker's guide if you are going to a hackathon held at a university to prevent being ticketed and to quickly access the hackathon venues.</p>
+    </div>
+    <div id="extraDiv">
+        <h2>Bottom lines</h2>
+        <p>Hackathons are fun, but they could be confusing for first-timers as there are tons of other things happening besides just coding. Good preparation should help avoid making mistakes that negatively affect your hackathon experience. Good luck to those who are going to one!</p>
+    </div>
+
+    <hr>
+    <footer>
+        <p>NicheSite is created by MBtion with love. 2026-<span id="yearCurrent"><script>document.getElementById("yearCurrent").textContent = new Date().getFullYear()</script></span></p>
+    </footer>
+</body>
+</html>
