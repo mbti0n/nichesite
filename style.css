@@ -132,6 +132,7 @@ img {
 table, th, td {
     border: 1px solid;
     border-collapse: collapse;
+    color: black;
 }
 
 th, td {
