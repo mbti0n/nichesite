@@ -132,6 +132,16 @@ img {
     width: 100%;
 }
 
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    color: white;
+}
+
+th, td {
+    padding: 4px;
+}
+
 #themeSwitcher {
     margin-left: auto;
     height: 40px;
