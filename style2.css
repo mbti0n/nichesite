@@ -11,21 +11,17 @@ body {
 #header {
     background-color: #1F1F1F;
     color: white;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
 }
 
 #headerStyle {
-    display: flex
+    display: flex;
 }
 
 nav {
     background-color: #1F1F1F;
     color: white;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px;
 }
 
 pre {
@@ -34,14 +30,13 @@ pre {
     padding: 5px 15px;
 }
 
-
 #navLink {
     margin-right: 20px;
     padding-bottom: 7px;
 }
 
 #navLink, #navLink:visited, #navLink:hover {
-    color: white
+    color: white;
 }
 
 #navLink:hover {
@@ -49,9 +44,7 @@ pre {
 }
 
 article:not(#blank):not(#hotTake) {
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 15px;
     margin-bottom: 10px;
     background-color: #1E1E1E;
     border-top: 7px solid;
@@ -60,19 +53,16 @@ article:not(#blank):not(#hotTake) {
 }
 
 #hotTake {
-    border: 0px !important;
+    border: 0 !important;
     background: #94731e !important;
-    padding: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 15px;
     margin-bottom: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 #headerContainer {
     padding: 15px;
-    margin: 20px;
-    margin-bottom: 10px;
+    margin: 20px 20px 10px;
     background-color: #1E1E1E;
     border-top: 7px solid;
     border-color: #3F51B5;
@@ -86,14 +76,11 @@ article:not(#blank):not(#hotTake) {
 }
 
 #listPages {
-    padding: 20px
+    padding: 20px;
 }
 
 #extraDiv {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px;
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -122,10 +109,12 @@ li {
 
 hr {
     color: #ffffff80;
+    margin: 5px 20px 20px;
 }
+
 a {
     text-decoration: none;
-    color: #4a5fd6
+    color: #4a5fd6;
 }
 
 img {
@@ -148,27 +137,27 @@ th, td {
     width: 40px;
     background: #3b3b3b;
     color: white;
-    border: 0px solid;
+    border: 0 solid;
     border-radius: 50px;
 }
 
 #homeLink {
     color: white;
-    transition: 0.25s ease color;
+    transition: color 0.25s ease;
 }
 
 #homeLink:hover {
-    color: #3F51B5
+    color: #3F51B5;
 }
-
 
 #linkHover {
     color: gray;
     background-color: transparent;
     padding-left: 4px;
     padding-right: 4px;
-    transition: 0.25s ease background-color;
+    transition: background-color 0.25s ease;
 }
+
 #linkHover:hover {
     color: white;
     background-color: #3F51B5;
@@ -178,8 +167,9 @@ th, td {
     color: #7986CB;
     background-color: transparent;
     text-decoration: underline;
-    transition: 0.25s ease background-color;
+    transition: background-color 0.25s ease;
 }
+
 #articleLink:hover, #captionLink:hover {
     color: white;
     background-color: #7986CB;
@@ -187,13 +177,10 @@ th, td {
 
 #customButton {
     font-size: 16px;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 12px;
     background-color: #3F51B5;
-    transition: 0.25s ease background-color;
-    border: 0px;
+    transition: background-color 0.25s ease;
+    border: 0;
     color: white;
 }
 
@@ -214,22 +201,17 @@ footer {
     padding-right: 20px;
 }
 
-hr {
-    margin: 20px;
-    margin-top: 5px;
-}
-
 /* Credits to https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box*/
 input[type='number'] {
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
     font-size: 18px;
     color: white;
     background: #1E1E1E;
-    border: 0px solid;
+    border: 0 solid;
     border-bottom: 2px solid;
-    border-bottom-color: #3F51B5
-
+    border-bottom-color: #3F51B5;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -241,7 +223,7 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     footer, hr, #headerContainer, #extraDiv {
         width: 50%;
         margin-left: auto;
@@ -261,7 +243,7 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     footer, hr, #headerContainer, #extraDiv {
         width: 50%;
         margin-left: auto;
@@ -281,7 +263,7 @@ input::-webkit-inner-spin-button {
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     footer, hr, #headerContainer, #extraDiv {
         width: 80%;
         margin-left: auto;
